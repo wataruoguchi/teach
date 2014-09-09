@@ -1,0 +1,26 @@
+{
+  "name": "Hint",
+  "version": "0.0.0",
+  "description": "HTML and JavaScript hinting with watch task",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "start": "grunt watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danactive/teach.git"
+  },
+  "author": "Dan BROOKS",
+  "license": "No License",
+  "bugs": {
+    "url": "https://github.com/danactive/teach/issues"
+  },
+  "homepage": "https://github.com/danactive/teach",
+  "devDependencies": {
+    "grunt": "0.4.x",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-htmlhint": "0.4.x"
+  }
+}
