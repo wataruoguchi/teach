@@ -14,8 +14,7 @@ module.exports = function(grunt) {
 					"doctype-first": true,
 					"spec-char-escape": true,
 					"id-unique": true,
-					"head-script-disabled": true,
-					"style-disabled": true
+					"head-script-disabled": true
 				},
 				src: [
 					'**/*.html',
