@@ -1,3 +1,4 @@
+# Lint
 ## Setup
 * Install [grunt.js](http://gruntjs.com/getting-started)
 
