@@ -1,3 +1,5 @@
+/*exported add, subtract*/
+
 var add = function (numA, numB) {
 	return numA + numB;
 };
