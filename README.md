@@ -1,3 +1,6 @@
+## Setup
+* Install [grunt.js](http://gruntjs.com/getting-started)
+
 ## Terms
 * **concatenate** is to join many files into one
 * **minify** is to transform variables to their shortest form (i.e. functionName to a). Whitespace including comments are removed. As a result your JavaScript code is obfuscated.
