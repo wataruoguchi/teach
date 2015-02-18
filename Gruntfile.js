@@ -65,5 +65,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-htmlhint');
 
 	// Task(s).
-	//grunt.registerTask('validate', ['htmlhint']);
+	grunt.registerTask('lint', ['htmlhint', 'jshint']);
+	grunt.registerTask('hint', ['lint']);
 };
