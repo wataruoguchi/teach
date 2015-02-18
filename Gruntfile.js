@@ -4,66 +4,33 @@ module.exports = function(grunt) {
 
 	// Project configuration.
 	grunt.initConfig({
-		htmlhint: { // Task
-			dev: { // Target
-				options: { // Target options
-					"tag-pair": true,
-					"tagname-lowercase": true,
-					"attr-lowercase": true,
-					"attr-value-double-quotes": true,
-					"doctype-first": true,
-					"spec-char-escape": true,
-					"id-unique": true,
-					"head-script-disabled": true
-				},
-				src: [
-					'**/*.html',
-					'!node_modules/**/*.html'
-				]
-			}
-		},
-		jshint: {
+		concat: {
 			dev: {
-				src: [
-					'Gruntfile.js',
-					'**/*.js',
-					'!node_modules/**/*.js'
-				],
-				nonull: true
-			},
-			options: {
-				curly: true,
-				eqeqeq: true,
-				immed: true,
-				latedef: true,
-				loopfunc: true,
-				noarg: true,
-				sub: true,
-				undef: true,
-				unused: true
+				src: ["sample/js/*.js"],
+				dest: 'dist/built.js',
 			}
 		},
 		pkg: grunt.file.readJSON('package.json'),
-		watch: {
-			htmlhint: {
-				files: '<%= htmlhint.dev.src %>',
-				tasks: ['htmlhint']
-			},
-			jshint: {
-				files: ['<%= jshint.dev.src %>'],
-				tasks: ['jshint'],
-				options: {
-					reload: true
+		uglify: {
+			dev: {
+				files: {
+					'dist/built.min.js': ['dist/built.js']
 				}
+			}
+		},
+		watch: {
+			concat: {
+				files: '<%= concat.dev.src %>',
+				tasks: ['concat', 'uglify']
 			}
 		}
 	});
 
 	// Load Grunt.js plugins
-	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-htmlhint');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	// Task(s).
-	//grunt.registerTask('validate', ['htmlhint']);
+	grunt.registerTask('bundle', ['concat', 'uglify']);
 };
