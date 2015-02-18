@@ -1,3 +1,4 @@
+# Minify
 ## Setup
 * Install [grunt.js](http://gruntjs.com/getting-started)
 
@@ -9,3 +10,18 @@
 ## CLI Commands
 * `grunt watch` Watch JavaScript files
 * `grunt bundle` Bundle JavaScript files
+ 
+## Static asset pipeline
+* Concatenation: join many files into one
+	* Reason: Lower HTTP requests. HTTP handshake is slow and consumes mobile battery and costly data
+* Minification: Remove whitespace (spaces, tabs, line breaks) and comments
+	* Reason: Decrease filesize. Eliminate human readability bloat.
+* Obfuscation: Replace long variable names with 1 or 2 character variable names.
+	* Reason: Decrease filesize. Eliminate human readability bloat.
+* Compress: Configure your web server to apply gzip compression.
+	* Reason: Decrease filesize which relies on the browser to unzip.
+
+Todo
+* Concat: CSS, JS
+* Minify: HTML, CSS, JS
+* Obfuscate: JS
