@@ -4,8 +4,8 @@
   "description": "Concat and Minify JS",
   "main": "Gruntfile.js",
   "scripts": {
-    "start": "grunt watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "echo \"Error: not specified\" && exit 1",
+    "test": "mocha sample/test"
   },
   "repository": {
     "type": "git",
@@ -18,8 +18,7 @@
   },
   "homepage": "https://github.com/danactive/teach",
   "devDependencies": {
-    "grunt-contrib-concat": "0.5.x",
-    "grunt-contrib-uglify": "0.7.x",
+    "expect.js": "^0.3.1",
     "grunt-contrib-watch": "0.6.x"
   }
 }

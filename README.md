@@ -1,8 +1,13 @@
+## Setup
+* Install [grunt.js](http://gruntjs.com/getting-started)
+* Run `npm install mocha -global` to install [mocha.js](http://mochajs.org/)
+
 ## Terms
-* **concatenate** is to join many files into one
-* **minify** is to transform variables to their shortest form (i.e. functionName to a). Whitespace including comments are removed. As a result your JavaScript code is obfuscated.
+* **unit test** test the positive and negative of a module of code
 * **CLI** command line interface (i.e. Windows command prompt or Mac shell or Git terminal)
 
 ## CLI Commands
-* `grunt watch` Watch JavaScript files
-* `grunt bundle` Bundle JavaScript files
+* `npm test` Execute unit tests
+
+## Docs
+* [expect.js](https://www.npmjs.com/package/expect.js)
